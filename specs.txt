@@ -1,0 +1,47 @@
+# Especificaciones del Proyecto: Matching de Consultores
+
+## 1. Descripción General de la Aplicación
+
+Esta aplicación web interactiva, construida con Gradio, está diseñada para facilitar el proceso de *matching* entre consultores y proyectos. Su objetivo principal es automatizar la extracción de información clave de los resúmenes ejecutivos de los consultores y permitir a los usuarios definir los requisitos de los proyectos. Con base en esta información estructurada, la aplicación calcula un score de compatibilidad, presentando los resultados de manera clara y justificada.
+
+**Funcionalidades Clave:**
+*   **Extracción de Perfiles de Consultores:** A partir de un resumen ejecutivo en texto libre, la aplicación extrae automáticamente datos como tecnologías conocidas, experiencia laboral (sector y rol), nivel de idiomas, años de experiencia y certificaciones.
+*   **Gestión de Proyectos:** Permite definir y almacenar los requisitos específicos de los proyectos (rol, tecnologías, sector, idiomas, experiencia, certificaciones).
+*   **Cálculo de Matching:** Evalúa la compatibilidad de cada consultor con un proyecto seleccionado, asignando un score porcentual.
+*   **Justificación Detallada:** Genera una tabla comparativa visualmente enriquecida que resalta las coincidencias entre las habilidades del consultor y los requisitos del proyecto, facilitando la toma de decisiones.
+*   **Traducción de Resúmenes Ejecutivos (Nueva Pestaña):** Ofrece la funcionalidad de traducir el resumen ejecutivo del consultor con el mejor *matching* a otros idiomas (inglés, en este caso), ahora accesible desde una pestaña dedicada.
+*   **Búsqueda Semántica de Candidatos (Nueva Pestaña):** Permite buscar consultores utilizando consultas en lenguaje natural, encontrando a los más relevantes basándose en la similitud semántica de sus perfiles. Esta funcionalidad se encuentra en una pestaña independiente para una mejor organización.
+*   **Persistencia de Datos:** Los perfiles de consultores y los requisitos de proyectos se guardan automáticamente en archivos JSON (`consultants_data.json`, `projects_data.json`) para asegurar que la información persista entre sesiones.
+
+**¿Por qué es útil?**
+Esta herramienta optimiza el tiempo en la selección de personal para proyectos, reduce el sesgo en la evaluación de candidatos y proporciona una justificación objetiva para las decisiones de *staffing*. Es ideal para consultoras, empresas de reclutamiento o departamentos de gestión de proyectos que buscan una forma eficiente y estructurada de gestionar sus recursos humanos.
+
+## 2. Tecnologías Utilizadas
+
+La aplicación se basa en una combinación de librerías de Python para procesamiento de lenguaje natural, interfaz de usuario y manejo de datos:
+
+*   **Gradio:** Framework principal para la construcción de la interfaz de usuario web interactiva.
+*   **Hugging Face Transformers:** Utilizado para la traducción de texto (modelo `Helsinki-NLP/opus-mt-es-en`) con `MarianTokenizer`.
+*   **Sentence-Transformers:** Esencial para la funcionalidad de búsqueda semántica, generando embeddings vectoriales de los textos (modelo `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`).
+*   **Pandas:** Utilizado para el manejo y manipulación de datos, y para la visualización de DataFrames.
+*   **Scikit-learn (sklearn.metrics.pairwise.cosine_similarity):** Empleado para calcular la similitud coseno.
+*   **JSON y Python `os`:** Utilizados para la persistencia de datos en archivos locales (`consultants_data.json`, `projects_data.json`).
+*   **Python `re` (Regular Expressions) y `unicodedata`:** Fundamentales para la extracción de información estructurada y normalización de texto.
+
+### 2.1. Librerías de Python Requeridas (`requirements.txt`)
+
+Las siguientes librerías son necesarias para la ejecución de la aplicación:
+```
+gradio
+transformers==5.8.0
+pandas==2.2.2
+sentence-transformers
+torch
+scikit-learn
+sacremoses
+sentencepiece
+```
+
+## 3. Despliegue en Hugging Face Spaces
+
+https://huggingface.co/spaces/gustavodgomez/HR-Match
