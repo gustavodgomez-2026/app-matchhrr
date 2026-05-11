@@ -1,0 +1,56 @@
+{
+    "project phoenix": {
+        "Nombre del Proyecto": "Project Phoenix",
+        "Rol del Proyecto": "Data Scientist",
+        "Tecnologías Requeridas": "Python, TensorFlow, SQL",
+        "Sector del Proyecto": "Banca/Fintech",
+        "Idiomas Requeridos": "Ingles",
+        "Años de Experiencia Requeridos": "3 años",
+        "Certificaciones Necesarias": "GCP"
+    },
+    "aurora initiative": {
+        "Nombre del Proyecto": "Aurora Initiative",
+        "Rol del Proyecto": "ML Ops",
+        "Tecnologías Requeridas": "Python, SQL, HTML",
+        "Sector del Proyecto": "Retail",
+        "Idiomas Requeridos": "Frances",
+        "Años de Experiencia Requeridos": "5 años",
+        "Certificaciones Necesarias": "AWS"
+    },
+    "gemini upgrade": {
+        "Nombre del Proyecto": "Gemini Upgrade",
+        "Rol del Proyecto": "Developer",
+        "Tecnologías Requeridas": "Javascript, React",
+        "Sector del Proyecto": "Ecommerce",
+        "Idiomas Requeridos": "Ingles, Frances",
+        "Años de Experiencia Requeridos": "7 años",
+        "Certificaciones Necesarias": "Azure"
+    },
+    "deep dive analytics": {
+        "Nombre del Proyecto": "Deep Dive Analytics",
+        "Rol del Proyecto": "Data Engineer",
+        "Tecnologías Requeridas": "SQL, Python",
+        "Sector del Proyecto": "Mineria",
+        "Idiomas Requeridos": "Portugues",
+        "Años de Experiencia Requeridos": "más de 10 años",
+        "Certificaciones Necesarias": "Databricks"
+    },
+    "public sector transformation": {
+        "Nombre del Proyecto": "Public Sector Transformation",
+        "Rol del Proyecto": "GenAI Engineer",
+        "Tecnologías Requeridas": "Python, TensorFlow",
+        "Sector del Proyecto": "Gobierno",
+        "Idiomas Requeridos": "Ingles, Portugues",
+        "Años de Experiencia Requeridos": "8 años",
+        "Certificaciones Necesarias": "GCP, AWS"
+    },
+    "industry 4.0 pilot": {
+        "Nombre del Proyecto": "Industry 4.0 Pilot",
+        "Rol del Proyecto": "Data Scientist",
+        "Tecnologías Requeridas": "Python, SQL, TensorFlow",
+        "Sector del Proyecto": "Industria",
+        "Idiomas Requeridos": "Frances, Portugues",
+        "Años de Experiencia Requeridos": "6 años",
+        "Certificaciones Necesarias": "Azure, Databricks"
+    }
+}

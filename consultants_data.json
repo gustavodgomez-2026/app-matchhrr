@@ -1,0 +1,32 @@
+[
+    {
+        "Nombre del Consultor": "Maria Lopez",
+        "Tecnologías Conocidas": "Python, PyTorch, SQL, Pandas",
+        "Experiencia Laboral (Sector)": "Healthtech",
+        "Experiencia Laboral (Rol)": "Data Scientist, AI Researcher",
+        "Nivel de Idiomas": "Ingles, Español",
+        "Años de Experiencia": "5 años",
+        "Certificaciones": "AWS, NVIDIA Deep Learning Institute",
+        "Executive Summary Original": "Maria Lopez tiene 5 años de experiencia como Data Scientist y AI Researcher en Healthtech. Domina Python, PyTorch, SQL y Pandas. Certificada en AWS y NVIDIA Deep Learning Institute. Habla Inglés y Español."
+    },
+    {
+        "Nombre del Consultor": "Carlos Rodriguez",
+        "Tecnologías Conocidas": "Java, Javascript, React, SQL",
+        "Experiencia Laboral (Sector)": "Banca, Fintech",
+        "Experiencia Laboral (Rol)": "Developer, ML Ops",
+        "Nivel de Idiomas": "Ingles, Frances",
+        "Años de Experiencia": "8 años",
+        "Certificaciones": "Azure, PMP",
+        "Executive Summary Original": "Carlos Rodriguez, con 8 años de experiencia, es un Developer y ML Ops en los sectores de Banca y Fintech. Experto en Java, Javascript, React y SQL. Certificado en Azure y PMP. Habla Inglés y Francés."
+    },
+    {
+        "Nombre del Consultor": "Ana Gomez",
+        "Tecnologías Conocidas": "Python, Spark, Hadoop, SQL",
+        "Experiencia Laboral (Sector)": "Retail, Logistica",
+        "Experiencia Laboral (Rol)": "Data Engineer",
+        "Nivel de Idiomas": "Español, Portugues",
+        "Años de Experiencia": "más de 10 años",
+        "Certificaciones": "Databricks",
+        "Executive Summary Original": "Ana Gomez es una Data Engineer con más de 10 años de experiencia en Retail y Logistica. Sus habilidades incluyen Python, Spark, Hadoop y SQL. Certificada en Databricks. Habla Español y Portugués."
+    }
+]
