@@ -1,0 +1,6 @@
+gradio
+transformers
+pandas==2.2.2
+sentence-transformers
+torch
+scikit-learn
