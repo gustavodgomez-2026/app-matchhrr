@@ -1,6 +1,8 @@
 gradio
-transformers
+transformers==5.8.0
 pandas==2.2.2
 sentence-transformers
 torch
 scikit-learn
+sacremoses
+sentencepiece
