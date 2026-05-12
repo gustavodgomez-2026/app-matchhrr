@@ -99,10 +99,8 @@ La aplicación está desplegada en Hugging Face Spaces y se puede acceder aquí:
 **2 Actualizacion base de datos de consultores**
 ![2 Actualizacion base de datos de consultores](images/2_Base_de_datos_de_consultores.png)
 
-![2 Actualizacion base de datos de consultores](images/2_Base_de_datos_de_consultores.png)
-
 **3 Ingresar un nuevo proyecto**
-![3 Ingresar un nuevo proyecto](images/3 Ingresar un nuevo proyecto.png)
+![3 Ingresar un nuevo proyecto](images/3_Ingresar_un_nuevo_proyecto.png)
 
 **4 Calculo de score y matching consultor y proyecto**
 ![4 Calculo de score y matching consultor y proyecto](images/4 Calculo de score y matching consultor y proyecto.png)
