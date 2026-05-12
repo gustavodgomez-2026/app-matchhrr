@@ -99,6 +99,8 @@ La aplicación está desplegada en Hugging Face Spaces y se puede acceder aquí:
 **2 Actualizacion base de datos de consultores**
 ![2 Actualizacion base de datos de consultores](images/2_Base_de datos_de_consultores.png)
 
+![2 Actualizacion base de datos de consultores](images/2_Base_de datos_de_consultores.png)
+
 **3 Ingresar un nuevo proyecto**
 ![3 Ingresar un nuevo proyecto](images/3 Ingresar un nuevo proyecto.png)
 
