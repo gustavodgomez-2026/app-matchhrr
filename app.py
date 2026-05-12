@@ -1,7 +1,7 @@
 import gradio as gr
 import pandas as pd
 import torch
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, MarianTokenizer
 from gradio import Blocks
 import re
 import unicodedata
@@ -14,7 +14,7 @@ import numpy as np
 
 # --- Configuración para modelo de traducción (Español a Inglés) ---
 translation_model_name = "Helsinki-NLP/opus-mt-es-en"
-translation_tokenizer = AutoTokenizer.from_pretrained(translation_model_name)
+translation_tokenizer = MarianTokenizer.from_pretrained(translation_model_name)
 translation_model = AutoModelForSeq2SeqLM.from_pretrained(translation_model_name)
 # -------------------------------------------------------------------
 
@@ -34,7 +34,9 @@ def save_data(data, filename):
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 def load_data(filename, default_value):
-    """Carga datos de un archivo JSON. Retorna un valor por defecto si el archivo no existe o está vacío."""
+    """
+    Carga datos de un archivo JSON. Retorna un valor por defecto si el archivo no existe o está vacío.
+    """
     if os.path.exists(filename) and os.path.getsize(filename) > 0:
         try:
             with open(filename, 'r', encoding='utf-8') as f:
@@ -45,6 +47,8 @@ def load_data(filename, default_value):
     return default_value
 
 # Inicializar datos globales cargándolos desde archivos JSON o con valores por defecto
+# Estas líneas deben ejecutarse después de que load_data y save_data estén definidas en el ámbito global del notebook.
+# POR LO TANTO, SE DESCOMENTAN AQUÍ PARA QUE app.py LAS USE AL INICIAR.
 all_consultants_data = load_data(CONSULTANTS_FILE, [])
 all_stored_projects_state_initial = load_data(PROJECTS_FILE, {})
 all_registered_project_names_initial = set(item.lower() for item in all_stored_projects_state_initial.keys())
@@ -366,7 +370,6 @@ def translate_summary_for_top_consultant(top_match_info):
         gr.Error(f"Error durante la traducción: {e}")
         return "Error al traducir el resumen ejecutivo."
 
-
 def semantic_search_consultants(query: str, all_consultants_data: list):
     """
     Realiza una búsqueda semántica de consultores basada en una consulta en lenguaje natural.
@@ -414,11 +417,13 @@ def semantic_search_consultants(query: str, all_consultants_data: list):
 
 
 with Blocks(title="Matching de Consultores") as demo:
+    # all_consultants_state y all_stored_projects_state_initial DEBEN ser inicializados fuera de Blocks
+    # después de que load_data esté disponible en el ámbito global.
     all_consultants_state = gr.State(all_consultants_data)
     all_stored_projects_state = gr.State(all_stored_projects_state_initial)
     all_registered_project_names = gr.State(all_registered_project_names_initial)
 
-    gr.Markdown("# Extractor y Gestor de Perfiles de Consultores")
+    gr.Markdown("# MATCH-RRHH: encuentra el mejor match consultor-proyecto")
 
     with gr.Tab("Cargar Perfil"):
         gr.Markdown("## Introduce el Resumen Ejecutivo del Consultor")
@@ -495,14 +500,15 @@ with Blocks(title="Matching de Consultores") as demo:
         output_matching_results = gr.Dataframe(headers=["Nombre del Consultor", "Score de Matching"], label="Resultado del Matching")
 
         justification_button = gr.Button("Comparativa detallada consultor y proyecto")
-        # This Markdown component will now serve as the dynamic HTML title for the comparison table
         output_dynamic_comparison_title = gr.Markdown(value="## Comparativa Proyecto vs. Consultor", visible=True)
-        output_comparison_table = gr.Dataframe(visible=True, wrap=True, datatype="html") # No 'label' here; it's handled by output_dynamic_comparison_title
+        output_comparison_table = gr.Dataframe(visible=True, wrap=True, datatype="html")
 
+    with gr.Tab("Traducción Resumen Ejecutivo"):
         gr.Markdown("## Accede al resumen ejecutivo del consultor seleccionado en INGLES")
         translate_summary_button = gr.Button("Traducir Resumen Ejecutivo al Inglés")
         output_translated_summary = gr.Textbox(label="Resumen Ejecutivo Traducido (Inglés)", lines=5, interactive=False)
 
+    with gr.Tab("Búsqueda Semántica"):
         gr.Markdown("## Búsqueda Otros Posibles Candidatos")
         semantic_search_query_input = gr.Textbox(
             label="Ingresa lo que buscas en lenguaje natural",
@@ -660,7 +666,7 @@ with Blocks(title="Matching de Consultores") as demo:
             profile = top_match_info['top_consultant']['profile']
             project_reqs_dict = top_match_info['project_reqs']
             top_consultant_name = top_match_info['top_consultant']['name']
-            selected_project_name = top_match_info['selected_project_name']
+            selected_project_name = top_match_info['selected_project_name'] # REVERTED: Changed back to 'selected_project_name'
 
             # Create the base comparison DataFrame
             comparison_df = _create_comparison_table_df(profile, project_reqs_dict)
