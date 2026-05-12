@@ -93,4 +93,5 @@ La aplicación está desplegada en Hugging Face Spaces y se puede acceder aquí:
 
 ## 5. Capturas de Pantalla de la Aplicación Funcionando
 
-![1 Introduce resumen ejecutivo y extrae info](images/1 Introduce resumen ejecutivo y extrae info.png)
+[1 Introduce resumen ejecutivo y extrae info](images/1 Introduce resumen ejecutivo y extrae info.png)
+![Descripción de la imagen](images/captura_app.png)**
