@@ -93,20 +93,20 @@ La aplicación está desplegada en Hugging Face Spaces y se puede acceder aquí:
 
 ## 5. Capturas de Pantalla de la Aplicación Funcionando
 
-**1 Extraccion datos resumen ejecutivo**
+**5.1- Extraccion datos resumen ejecutivo**
 ![1 Extraccion datos resumen ejecutivo](images/1_Extraccion_datos_resumen_ejecutivo.png)
 
-**2 Actualizacion base de datos de consultores**
+**5.2- Actualizacion base de datos de consultores**
 ![2 Actualizacion base de datos de consultores](images/2_Base_de_datos_de_consultores.png)
 
-**3 Ingresar un nuevo proyecto**
+**5.3- Ingresar un nuevo proyecto**
 ![3 Ingresar un nuevo proyecto](images/3_Ingresar_un_nuevo_proyecto.png)
 
-**4 Calculo de score y matching consultor y proyecto**
-![4 Calculo de score y matching consultor y proyecto](images/4 Calculo de score y matching consultor y proyecto.png)
+**5.4- Calculo de score y matching consultor y proyecto**
+![4 Calculo de score y matching consultor y proyecto](images/4_Calculo_de_score_y_matching_consultor_y_proyecto.png)
 
-**5 Traduccion al ingles - resumen ejecutivo match**
-![5 Traduccion al ingles - resumen ejecutivo match](images/5 Traduccion al ingles - resumen ejecutivo match.png)
+**5.5- Traduccion al ingles - resumen ejecutivo match**
+![5 Traduccion al ingles - resumen ejecutivo match](images/5_Traduccion_al_ingles_resumen_ejecutivo_match.png)
 
-**6 Busqueda semantica de otros candidatos**
-![6 Busqueda semantica de otros candidatos](images/6 Busqueda semantica de otros candidatos.png)
+**5.6- Busqueda semantica de otros candidatos**
+![6 Busqueda semantica de otros candidatos](images/6_Busqueda_semantica_de_otros_candidatos.png)
